@@ -2,6 +2,10 @@
 #include <stdarg.h>
 #include "main.h"
 
+/**
+ * handle_s - handle string
+ * @s: string
+*/
 void handle_s(char *s)
 {
 	int j = 0;
@@ -13,6 +17,12 @@ void handle_s(char *s)
 	}
 }
 
+/**
+ * _printf - print formatted string
+ * @format: formated string
+ *
+ * Return: number of printed bytes
+*/
 int _printf(const char *format, ...)
 {
 	int i = 0;
@@ -21,7 +31,7 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	while(format[i] != '\0')
+	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
