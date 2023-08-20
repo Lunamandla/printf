@@ -3,36 +3,18 @@
 #include "main.h"
 
 /**
- * handle_s - handle string
- * @s: string
- *
- * Return: string len
-*/
-int handle_s(char *s)
-{
-	int j = 0;
-
-	while (s[j] != '\0')
-	{
-		_putchar(s[j]);
-		j++;
-	}
-
-	return (j);
-}
-
-/**
  * _printf - print formatted string
  * @format: formated string
  *
  * Return: number of printed bytes
-*/
+ */
 int _printf(const char *format, ...)
 {
 	int i = 0;
-	va_list args;
 	char nextChar;
 	int count = 0;
+
+	va_list args;
 
 	va_start(args, format);
 
@@ -42,20 +24,11 @@ int _printf(const char *format, ...)
 		{
 			nextChar = format[i + 1];
 			if (nextChar == 'c')
-			{
-				_putchar(va_arg(args, int));
-				i++;
-			}
-			if (nextChar == 's')
-			{
-			count += handle_s(va_arg(args, char *));
-				i++;
-			}
-			if (nextChar == '%')
-			{
-				_putchar(format[i]);
-				i++;
-			}
+				i += _putchar(va_arg(args, int));
+			else if (nextChar == 's')
+				i += print_string(va_arg(args, char *));
+			else if (nextChar == '%')
+				i += _putchar('%');
 		}
 		else
 		{
