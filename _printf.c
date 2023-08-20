@@ -22,6 +22,11 @@ int _printf(const char *format, ...)
 				_putchar(va_arg(args, int));
 				i++;
 			}
+			if (nextchar == 's')
+			{
+				// handle s
+				i++;
+			}
 		}
 		else
 		{
