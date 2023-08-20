@@ -5,8 +5,10 @@
 /**
  * handle_s - handle string
  * @s: string
+ *
+ * Return: string len
 */
-void handle_s(char *s)
+int handle_s(char *s)
 {
 	int j = 0;
 
@@ -15,6 +17,8 @@ void handle_s(char *s)
 		_putchar(s[j]);
 		j++;
 	}
+
+	return (j);
 }
 
 /**
@@ -28,6 +32,7 @@ int _printf(const char *format, ...)
 	int i = 0;
 	va_list args;
 	char nextChar;
+	int count = 0;
 
 	va_start(args, format);
 
@@ -43,7 +48,7 @@ int _printf(const char *format, ...)
 			}
 			if (nextChar == 's')
 			{
-				handle_s(va_arg(args, char *));
+			count += handle_s(va_arg(args, char *));
 				i++;
 			}
 			if (nextChar == '%')
@@ -58,8 +63,9 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
+	count += i;
 	va_end(args);
 
-	return (0);
+	return (count);
 }
 
