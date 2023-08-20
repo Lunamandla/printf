@@ -28,6 +28,8 @@ int _printf(const char *format, ...)
 				i += print_string(va_arg(args, char *));
 			else if (nextChar == '%')
 				i += _putchar('%');
+			else if (nextChar == ' ')
+				return (0);
 		}
 		else
 		{
