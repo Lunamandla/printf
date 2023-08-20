@@ -2,7 +2,16 @@
 #include <stdarg.h>
 #include "main.h"
 
+void handle_s(char *s)
+{
+	int j = 0;
 
+	while (s[j] != '\0')
+	{
+		_putchar(s[j]);
+		j++;
+	}
+}
 
 int _printf(const char *format, ...)
 {
@@ -22,9 +31,14 @@ int _printf(const char *format, ...)
 				_putchar(va_arg(args, int));
 				i++;
 			}
-			if (nextchar == 's')
+			if (nextChar == 's')
 			{
-				// handle s
+				handle_s(va_arg(args, char *));
+				i++;
+			}
+			if (nextChar == '%')
+			{
+				_putchar(format[i]);
 				i++;
 			}
 		}
