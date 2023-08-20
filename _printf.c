@@ -2,22 +2,35 @@
 #include <stdarg.h>
 #include "main.h"
 
+
+
 int _printf(const char *format, ...)
 {
+	int i = 0;
 	va_list args;
+	char nextChar;
 
 	va_start(args, format);
 
-// loop through the characters of format
-	// if a char == %
-		// check the char after %
-		// if that char is c
-			// call a fn to handle it
-		// else
-			// print the char as it is
-
+	while(format[i] != '\0')
+	{
+		if (format[i] == '%')
+		{
+			nextChar = format[i + 1];
+			if (nextChar == 'c')
+			{
+				_putchar(va_arg(args, int));
+				i++;
+			}
+		}
+		else
+		{
+			_putchar(format[i]);
+		}
+		i++;
+	}
 	va_end(args);
 
-	return (0)
+	return (0);
 }
 
