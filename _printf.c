@@ -2,6 +2,14 @@
 #include <stdarg.h>
 #include "main.h"
 
+/** 
+ * _printf - function that produce output according to format.
+ * @i: array
+ * @len: length of the strings of characters
+ *
+ * Return: value 
+ */
+
 int _printf(char const *format, ...)
 {
 	int i = 0, len = 0, j;
@@ -37,6 +45,5 @@ int _printf(char const *format, ...)
 		i++;
 	}
 	va_end(args);
-
 	return (len);
 }
