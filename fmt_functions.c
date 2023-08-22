@@ -2,6 +2,11 @@
 #include <stdarg.h>
 #include "main.h"
 
+/**
+ * print_char - function that print characters
+ * @args: argument list function
+ * Return: 0
+ */
 int print_char(va_list args)
 {
 	_putchar(va_arg(args, int));
@@ -9,6 +14,11 @@ int print_char(va_list args)
 	return (0);
 }
 
+/**
+ * print_string - function that print strings
+ * @args: argumnet list function
+ * Return: -2
+ */
 int print_string(va_list args)
 {
 	int i = 0;
@@ -28,6 +38,12 @@ int print_string(va_list args)
 	}
 	return (--i);
 }
+
+/**
+ * print_percentage - function that prints percentage
+ * @args: list of arguments
+ * Return: 0 value
+ */
 
 int print_percentage(va_list args __attribute__((unused)))
 {
