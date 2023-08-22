@@ -10,10 +10,10 @@
 
 int (*get_fmt_fn(char c))(va_list)
 {
-/**
- * struct fmt_fn - user-defined datatypes that group different datatypes
- */
-	struct fmt_fn fmt_fn_arr[] = {
+	/**
+	 * struct fmt_fn - user-defined datatypes that group different datatypes
+	 */
+	fmt_fn fmt_fn_arr[] = {
 		{'c', print_char},
 		{'s', print_string},
 		{'%', print_percentage},

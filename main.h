@@ -6,11 +6,11 @@
  * @c: member
  * @fn_ptr: pointer to a function
  */
-struct fmt_fn
+typedef struct fmt_fn
 {
 	char c;
 	int (*fn_ptr)(va_list);
-};
+} fmt_fn;
 #endif
 
 #ifndef PUTCHAR
