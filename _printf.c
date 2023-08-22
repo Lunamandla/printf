@@ -11,6 +11,7 @@
 int _printf(const char *format, ...)
 {
 	int i = 0, len = 0;
+	char c;
 	char *s;
 	va_list args;
 
@@ -23,11 +24,14 @@ int _printf(const char *format, ...)
 			switch (format[i + 1])
 			{
 				case 'c':
-					_putchar(va_arg(args, int));
+					c = va_arg(args, int);
+					_putchar(c);
 					i++;
 					break;
 				case 's':
 					s = va_arg(args, char *);
+					if (s == NULL)
+						s = "(nill)";
 					len += print_string(s);
 					i++;
 					break;
@@ -35,9 +39,11 @@ int _printf(const char *format, ...)
 					_putchar('%');
 					i++;
 					break;
+				case '\0':
+				case ' ':
+					return (-1);
 				default:
 				_putchar('%');
-				
 			}
 		}
 		else
