@@ -20,7 +20,7 @@ int (*get_fmt_fn(char c))(va_list)
 		{' ', print_nothing},
 		{'\0', print_nothing},
 		{0, NULL}
-	} fmt_fn;
+	};
 
 	int i = 0;
 
