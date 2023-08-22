@@ -9,5 +9,5 @@ int print_nothing(va_list args __attribute__((unused)))
 
 int print_no_fmt(va_list args __attribute__((unused)))
 {
-	return (-2);
+	return (-3);
 }

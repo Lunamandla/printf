@@ -18,6 +18,9 @@ int print_string(va_list args)
 	if (str == NULL)
 		str = "(null)";
 
+	if (str[0] == '\0')
+		return (-2);
+
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);

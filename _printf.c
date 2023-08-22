@@ -18,6 +18,11 @@ int _printf(char const *format, ...)
 			j = get_fmt_fn(format[i + 1])(args);
 			if (j == -1)
 				return (j);
+			else if (j == -2)
+			{
+				i++;
+				len--;
+			}
 			else if (j >= 0)
 			{
 				len += j;
