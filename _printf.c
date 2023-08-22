@@ -2,12 +2,10 @@
 #include <stdarg.h>
 #include "main.h"
 
-/** 
+/**
  * _printf - function that produce output according to format.
- * @i: array
- * @len: length of the strings of characters
- *
- * Return: value 
+ * @format: argument pointer
+ * Return: value
  */
 
 int _printf(char const *format, ...)
