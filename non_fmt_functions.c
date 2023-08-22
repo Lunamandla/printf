@@ -20,6 +20,7 @@ int print_nothing(va_list args __attribute__((unused)))
  * Return: -3 for  print_no_fmt
  * @args: holds the intformation for va_start and va_end function
  */
+
 int print_no_fmt(va_list args __attribute__((unused)))
 {
 	return (-3);

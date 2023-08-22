@@ -4,7 +4,7 @@
 /**
  * struct fmt_fn - user-defined datatypes that group different datatypes
  * @c: member
- * @fn_ptr: pointer to a functio
+ * @fn_ptr: pointer to a function
  */
 struct fmt_fn
 {
@@ -25,6 +25,7 @@ int _printf(const char *, ...);
 
 #ifndef GET_FMT_FN
 #define GET_FMT_FN
+
 /**
  * fmt_fn - function that calls struct
  * @char: declaring char value
