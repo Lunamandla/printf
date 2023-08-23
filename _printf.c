@@ -2,6 +2,11 @@
 #include <stdarg.h>
 #include "main.h"
 
+/**
+ * _printf - function that produces output according to format
+ *
+ * Return: value to get format
+ */
 int _printf(char const *format, ...)
 {
 	int i = 0, len = 0, j;

@@ -3,6 +3,11 @@
 #include <stdarg.h>
 #include "main.h"
 
+/**
+ * print_char - function that print characters
+ * @args: argument list
+ * Return: 0
+ */
 int print_char(va_list args)
 {
 	_putchar(va_arg(args, int));
@@ -10,6 +15,11 @@ int print_char(va_list args)
 	return (0);
 }
 
+/**
+ * print_string - function that print string or characters
+ * @args: argument list
+ * Return: value of fmt function
+ */
 int print_string(va_list args)
 {
 	int i = 0;
@@ -30,6 +40,11 @@ int print_string(va_list args)
 	return (--i);
 }
 
+/**
+ * print_percentage - function that prints percentage
+ * @args: argument list
+ * Return: 0
+ */
 int print_percentage(va_list args __attribute__((unused)))
 {
 	_putchar('%');
@@ -37,6 +52,11 @@ int print_percentage(va_list args __attribute__((unused)))
 	return (0);
 }
 
+/**
+ * print_int_d - function that produce output according to format
+ * @args: argument list
+ * Return: value
+ */
 int print_int_d(va_list args)
 {
 	int i, j, len, int_arg, print_count = 0, is_int_min = 0;

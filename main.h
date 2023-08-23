@@ -1,10 +1,16 @@
 #ifndef FMT_FN
 #define FMT_FN
-struct fmt_fn
+
+/**
+ * struct fmt_fn - user-defined datatypes that group defferent datatypes
+ * @c: member
+ * @fn_ptr: pointer to a function
+ */
+typedef struct fmt_fn
 {
 	char c;
 	int (*fn_ptr)(va_list);
-};
+} fmt_fn;
 #endif
 
 #ifndef PUTCHAR

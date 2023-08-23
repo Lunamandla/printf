@@ -3,17 +3,17 @@
 #include "main.h"
 
 /**
- * get_fmt_fn - function that produce output according to format
- * @c: declared variable
- * Return: value
+ * get_fmt_fn - function that gets function pointer
+ * @c: character
+ * Return: value of get format functio
  */
 
 int (*get_fmt_fn(char c))(va_list)
 {
-/**
- * fmt_fn - struc that groups diff datatypes intonew single data types
- */
-	struct fmt_fn fmt_fn_arr[] = {
+	/**
+	* struct fmt_fn - user-defined datatypes tha group defferent datatype
+	*/
+	fmt_fn fmt_fn_arr[] = {
 		{'c', print_char},
 		{'s', print_string},
 		{'%', print_percentage},
