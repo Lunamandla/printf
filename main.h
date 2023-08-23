@@ -66,4 +66,4 @@ int get_int_len(int);
 #ifndef IS_NEGATIVE
 #define IS_NEGATIVE
 int is_negative(int *, int *);
-#endif 
+#endif
