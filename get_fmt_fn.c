@@ -2,8 +2,17 @@
 #include <stdarg.h>
 #include "main.h"
 
+/**
+ * get_fmt_fn - function that produce output according to format
+ * @c: declared variable
+ * Return: value
+ */
+
 int (*get_fmt_fn(char c))(va_list)
 {
+/**
+ * fmt_fn - struc that groups diff datatypes intonew single data types
+ */
 	struct fmt_fn fmt_fn_arr[] = {
 		{'c', print_char},
 		{'s', print_string},

@@ -52,6 +52,12 @@ int print_no_fmt(va_list);
 int print_int_d(va_list);
 #endif
 
+#ifndef GET_INT_LEN
+#define GET_INT_LEN
 int get_int_len(int);
+#endif
 
+#ifndef IS_NEGATIVE
+#define IS_NEGATIVE
 int is_negative(int *, int *);
+#endif 
