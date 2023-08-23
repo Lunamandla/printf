@@ -2,12 +2,6 @@
 #include <stdarg.h>
 #include "main.h"
 
-/**
- * _printf - function that produce output according to format.
- * @format: argument pointer
- * Return: value
- */
-
 int _printf(char const *format, ...)
 {
 	int i = 0, len = 0, j;
@@ -43,5 +37,6 @@ int _printf(char const *format, ...)
 		i++;
 	}
 	va_end(args);
+
 	return (len);
 }

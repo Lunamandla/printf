@@ -1,16 +1,10 @@
 #ifndef FMT_FN
 #define FMT_FN
-
-/**
- * struct fmt_fn - user-defined datatypes that group different datatypes
- * @c: member
- * @fn_ptr: pointer to a function
- */
-typedef struct fmt_fn
+struct fmt_fn
 {
 	char c;
 	int (*fn_ptr)(va_list);
-} fmt_fn;
+};
 #endif
 
 #ifndef PUTCHAR
@@ -25,12 +19,6 @@ int _printf(const char *, ...);
 
 #ifndef GET_FMT_FN
 #define GET_FMT_FN
-
-/**
- * fmt_fn - function that calls struct
- * @char: declaring char value
- */
-
 int (*get_fmt_fn(char))(va_list);
 #endif
 
@@ -58,3 +46,12 @@ int print_nothing(va_list);
 #define PRINT_NO_FMT
 int print_no_fmt(va_list);
 #endif
+
+#ifndef PRINT_INT_D
+#define PRINT_INT_D
+int print_int_d(va_list);
+#endif
+
+int get_int_len(int);
+
+int is_negative(int *, int *);
