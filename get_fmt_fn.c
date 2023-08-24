@@ -21,6 +21,7 @@ int (*get_fmt_fn(char c))(va_list)
 		{'\0', print_nothing},
 		{'d', print_int_d},
 		{'i', print_int_d},
+		{'b', print_binary},
 		{0, NULL}
 	};
 

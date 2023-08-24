@@ -67,3 +67,13 @@ int get_int_len(int);
 #define IS_NEGATIVE
 int is_negative(int *, int *);
 #endif
+
+#ifndef PRINT_BINARY
+#define PRINT_BINARY
+int print_binary(va_list);
+#endif
+
+#ifndef PRINT_BI_RECURSIVE
+#define PRINT_BI_RECURSIVE
+int print_recursive(unsigned int, unsigned int, unsigned int, int *);
+#endif

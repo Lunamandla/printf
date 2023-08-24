@@ -44,11 +44,48 @@ int is_negative(int *n, int *print_count)
 }
 
 /**
- * print_int_min - function that prints minimum
- * @n: unused attribute
- * Return: 0
- */
-int print_int_min(int n __attribute__((unused)))
+ * print_recursive - print 0s and 1s recursively
+ * @n: base 10 number
+ * @i: first tracking number
+ * @j: second tracking number
+ * @len: total number of 0s and 1s
+ *
+ * Return: Always 0
+*/
+int print_recursive(unsigned int n, unsigned int i, unsigned int j, int *len)
 {
+	unsigned int k;
+
+	if (j >= n)
+	{
+		_putchar(1 + '0');
+		return (i / 2);
+	}
+
+	j += i;
+	i += i;
+	*len += 1;
+
+	j = print_recursive(n, i, j, len);
+
+	k = i / 2;
+	if (k == 1)
+	{
+		return (0);
+	}
+
+	j += k / 2;
+	if (j <= n)
+	{
+		_putchar(1 + '0');
+		return (j);
+	}
+	else
+	{
+		_putchar(0 + '0');
+		return (j -= k / 2);
+	}
+
 	return (0);
 }
+
